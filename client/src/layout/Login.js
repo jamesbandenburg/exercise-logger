@@ -24,8 +24,8 @@ const Login = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        console.log(users)
-        const userToLogin = users.map((ele,index) =>  { if (ele.length > 0) { return ele[index].filter((elem) => elem.email === loginEmail)}  })
+
+        const userToLogin = users[0].filter(user => user.email === loginEmail)
        
         if (userToLogin.length === 0) {
             alert("User not found. Please register if you don't have an account.")
