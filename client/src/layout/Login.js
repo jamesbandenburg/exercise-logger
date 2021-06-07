@@ -24,7 +24,7 @@ const Login = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-      
+        console.log(users)
         const userToLogin = users.map((ele,index) =>  { if (ele.length > 0) { return ele[index].filter((elem) => elem.email === loginEmail)}  })
        
         if (userToLogin.length === 0) {
